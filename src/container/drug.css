@@ -6,6 +6,9 @@
 .fieldwidth{
     width: 12%;
 }
+.fieldwidthComponent{
+    width: 15%;
+}
 .submitButton{
     text-align: center;
     padding: 40px;

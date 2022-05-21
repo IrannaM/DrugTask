@@ -74,10 +74,10 @@ const FunctionComponent = () => {
       {drugDetails &&
         drugDetails.fields.map((e, i) => {
           return (
-            <Grid container spacing={3}>
+            <Grid container spacing={2}>
               <Grid item md={12}>
                 {e.type === 'dropdown' ? (
-                  <FormControl required={e.isRequired} variant='standard' sx={{ minWidth: 200 }}>
+                  <FormControl required={e.isRequired} variant='standard' className='fieldwidthComponent'>
                     <InputLabel id='demo-simple-select-label'>{e.label}</InputLabel>
                     <Select labelId='demo-simple-select-label' id='demo-simple-select' label={e.label}>
                       {e.items.map(ele => (
@@ -90,7 +90,7 @@ const FunctionComponent = () => {
                     {e.type === 'date' ? (
                       <TextField
                         type={e.type}
-                        className='fieldwidth'
+                        className='fieldwidthComponent'
                         InputLabelProps={{ shrink: true }}
                         name={e.key}
                         required={e.isRequired}
@@ -105,7 +105,7 @@ const FunctionComponent = () => {
                     ) : (
                       <TextField
                         type={e.type}
-                        className='fieldwidth'
+                        className='fieldwidthComponent'
                         name={e.key}
                         required={e.isRequired}
                         id={e.key}
