@@ -1,0 +1,12 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+.fieldwidth{
+    width: 12%;
+}
+.submitButton{
+    text-align: center;
+    padding: 40px;
+}
