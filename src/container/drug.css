@@ -10,3 +10,12 @@
     text-align: center;
     padding: 40px;
 }
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 5px;
+  }
+
+.grid-container > div {
+    text-align: center;
+  }

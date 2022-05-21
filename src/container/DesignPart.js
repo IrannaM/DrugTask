@@ -18,9 +18,9 @@ class DesignPart extends Component {
         <h1>
           <Link href='/drug2details'>Drug2 Details</Link>
         </h1>
-        {/* <h1>
+        <h1>
           <Link href='/Functioncomponent'>Function Component</Link>
-        </h1> */}
+        </h1>
       </div>
     );
   }

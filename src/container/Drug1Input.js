@@ -80,18 +80,20 @@ class Drug1Input extends Component {
             {drugDetails &&
               drugDetails.fields.map((e, i) => {
                 return (
-                  <label>
-                    <label for='fields'>{e.label} : </label>
-                    {e.type === 'dropdown' ? (
-                      <select style={{ height: '100%', width: '100%' }} name={e.key} id={e.key}>
-                        {e.items.map((ele, ind) => (
-                          <option value={ele.value}>{ele.text}</option>
-                        ))}
-                      </select>
-                    ) : (
-                      <>{e.label === 'BMI' ? <input type={e.type} readonly='true' name={e.key} required={e.isRequired} style={{ height: '100%', width: '100%' }} /> : <input type={e.type} readonly={e.isReadonly} name={e.key} required={e.isRequired} style={{ height: '100%', width: '100%' }} />}</>
-                    )}
-                  </label>
+                  <div class='grid-container'>
+                    <div class='grid-item '>
+                      <label for='fields'>{e.label} : </label>
+                      {e.type === 'dropdown' ? (
+                        <select style={{ height: '100%', width: '100%' }} name={e.key} id={e.key}>
+                          {e.items.map((ele, ind) => (
+                            <option value={ele.value}>{ele.text}</option>
+                          ))}
+                        </select>
+                      ) : (
+                        <>{e.label === 'BMI' ? <input type={e.type} readonly='true' name={e.key} required={e.isRequired} style={{ height: '100%', width: '100%' }} /> : <input type={e.type} readonly={e.isReadonly} name={e.key} required={e.isRequired} style={{ height: '100%', width: '100%' }} />}</>
+                      )}
+                    </div>
+                  </div>
                 );
               })}
           </div>

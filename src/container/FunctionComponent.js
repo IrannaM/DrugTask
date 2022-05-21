@@ -1,4 +1,4 @@
-import { Button, FormControl, InputAdornment, InputLabel, MenuItem, Select, TextField } from '@mui/material';
+import { Button, FormControl, Grid, InputAdornment, InputLabel, MenuItem, Select, TextField } from '@mui/material';
 import React from 'react';
 import '../container/drug.css';
 
@@ -70,14 +70,14 @@ const drugDetails = {
 
 const FunctionComponent = () => {
   return (
-    <div>
-      <div className='header'>
-        {drugDetails &&
-          drugDetails.fields.map((e, i) => {
-            return (
-              <>
+    <div className='submitButton'>
+      {drugDetails &&
+        drugDetails.fields.map((e, i) => {
+          return (
+            <Grid container spacing={3}>
+              <Grid item md={12}>
                 {e.type === 'dropdown' ? (
-                  <FormControl required={e.isRequired} variant='standard' sx={{ minWidth: 120 }}>
+                  <FormControl required={e.isRequired} variant='standard' sx={{ minWidth: 200 }}>
                     <InputLabel id='demo-simple-select-label'>{e.label}</InputLabel>
                     <Select labelId='demo-simple-select-label' id='demo-simple-select' label={e.label}>
                       {e.items.map(ele => (
@@ -119,13 +119,13 @@ const FunctionComponent = () => {
                     )}
                   </>
                 )}
-              </>
-            );
-          })}
-      </div>
-      <div className='submitButton'>
-        <Button variant='outlined'>Submit</Button>
-      </div>
+              </Grid>
+            </Grid>
+          );
+        })}
+      <Button style={{ margin: 10 }} variant='outlined'>
+        Submit
+      </Button>
     </div>
   );
 };
